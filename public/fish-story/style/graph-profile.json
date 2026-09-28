@@ -1,0 +1,146 @@
+{
+  "profile": "interactive-graph",
+  "description": "Context profile for generating interactive data graphs. Merges the contour line-art visual language with the atmospheric color palette from the silhouette images.",
+  "inherits": "style-profile.json",
+
+  "graph_philosophy": {
+    "approach": "Data as form — graph elements behave like the flowing contour lines: they suggest shape, movement, and density rather than simply encoding values mechanically",
+    "mood": "Calm scientific curiosity — precise but never clinical",
+    "interaction_metaphor": "Revealing layers of a form, like peeling contour lines back to see the data beneath"
+  },
+
+  "chart_types_supported": [
+    {
+      "type": "line-chart",
+      "style_note": "Multiple series rendered as flowing parallel lines at varying opacity — mimics the contour line aesthetic directly"
+    },
+    {
+      "type": "area-chart",
+      "style_note": "Fill uses a gradient from the warm or cool palette register at 15% opacity; stroke is full opacity"
+    },
+    {
+      "type": "scatter-plot",
+      "style_note": "Points rendered as small open circles with hairline strokes; density clusters visually recall compressed contour regions"
+    },
+    {
+      "type": "network-graph",
+      "style_note": "Edges as thin contour lines; nodes as minimal circles; layout should feel organic/biomorphic not grid-like"
+    },
+    {
+      "type": "radial / polar",
+      "style_note": "Concentric lines radiating outward, variable spacing encodes value — directly evokes contour topography"
+    }
+  ],
+
+  "visual_encoding": {
+    "data_series_colors": [
+      "#FF6B6B",
+      "#3AAFB9",
+      "#C4B8D8",
+      "#FF8C7A",
+      "#2D5FAA",
+      "#A8E6E6"
+    ],
+    "neutral_axis_color":  "#AAAAAA",
+    "grid_line_color":     "#DDDDDD",
+    "grid_line_weight":    0.5,
+    "grid_style":          "dotted or very faint solid — never dominant",
+    "background":          "#F5F3EE",
+    "dark_mode_background":"#1A1C2A",
+    "highlight_color":     "#FF4560",
+    "highlight_cool":      "#3AAFB9"
+  },
+
+  "typography_in_graph": {
+    "axis_labels":     { "font": "DM Mono", "size": "0.7rem",  "color": "#666666" },
+    "value_labels":    { "font": "DM Mono", "size": "0.75rem", "color": "#111111" },
+    "chart_title":     { "font": "Cormorant Garamond", "size": "1.25rem", "weight": 400, "style": "italic" },
+    "tooltip_title":   { "font": "DM Mono", "size": "0.8rem" },
+    "tooltip_value":   { "font": "Cormorant Garamond", "size": "1.1rem", "weight": 600 }
+  },
+
+  "interactions": {
+    "hover": {
+      "behavior": "Highlight hovered line/point; sibling elements reduce to 20% opacity",
+      "effect": "Soft glow using current series color — radial gradient bloom, not a CSS box-shadow",
+      "cursor": "crosshair"
+    },
+    "tooltip": {
+      "style": "Minimal floating card — no border, subtle backdrop-blur, monospace values",
+      "animation": "Fade + slight upward translate over 200ms",
+      "background": "rgba(255,255,255,0.85) light / rgba(26,28,42,0.90) dark",
+      "border": "1px solid rgba(0,0,0,0.08)"
+    },
+    "zoom_pan": {
+      "enabled": true,
+      "zoom_style": "Line weights stay constant during zoom — only data positions scale"
+    },
+    "brush_select": {
+      "enabled": true,
+      "selection_fill": "rgba(62, 175, 185, 0.08)",
+      "selection_border": "#3AAFB9"
+    },
+    "animation_on_load": {
+      "type": "line-draw",
+      "description": "Lines draw themselves from left to right using SVG stroke-dashoffset animation — directly mirrors the contour drawing aesthetic",
+      "duration": "1200ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "stagger_per_series": "150ms"
+    },
+    "animation_on_update": {
+      "type": "morph",
+      "duration": "600ms",
+      "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+    }
+  },
+
+  "axes": {
+    "x_axis": {
+      "line_visible": false,
+      "tick_visible": true,
+      "tick_length":  4,
+      "tick_color":   "#AAAAAA"
+    },
+    "y_axis": {
+      "line_visible": false,
+      "tick_visible": true,
+      "tick_length":  4,
+      "position":     "left",
+      "tick_color":   "#AAAAAA"
+    }
+  },
+
+  "legend": {
+    "position": "top-right",
+    "style": "inline dots (4px open circles) + DM Mono labels",
+    "interactive": true,
+    "toggle_behavior": "Click to hide/show series; hidden series fade out via opacity transition"
+  },
+
+  "responsive": {
+    "breakpoints": {
+      "mobile":  "< 640px — hide secondary grid lines, reduce label density",
+      "tablet":  "640–1024px — standard",
+      "desktop": "> 1024px — full fidelity"
+    }
+  },
+
+  "library_recommendations": [
+    { "name": "D3.js",    "reason": "Maximum control over SVG contour-style line rendering and custom animations" },
+    { "name": "Recharts", "reason": "React-friendly, good baseline for line/area charts with custom SVG overrides" },
+    { "name": "Observable Plot", "reason": "Elegant defaults close to the desired aesthetic with minimal config" }
+  ],
+
+  "do": [
+    "Animate lines drawing in on load — this is the signature interaction",
+    "Use opacity as a primary encoding dimension (density = importance)",
+    "Keep axes and grid as quiet as possible — let the data lines speak",
+    "Apply grain texture overlay to the chart background at 3–5% opacity"
+  ],
+  "dont": [
+    "Use filled bars or pie charts — line forms only",
+    "Add heavy grid lines or borders around the chart",
+    "Use more than 6 colors simultaneously",
+    "Use bold or heavy font weights in labels"
+  ]
+}

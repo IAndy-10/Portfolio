@@ -1,0 +1,68 @@
+  /* global.css*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Albra";
+  src: url("/fonts/AlbraBookTRIAL-Bold.otf") format("otf"),
+       url("/fonts/AlbraTRIAL-Thin.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  /* height: 100%; */
+}
+html,
+body {
+  /* height: 100%; */
+  font-family: var(--font-poppins), sans-serif;
+  color: #000000;
+  background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), serif;
+}
+
+main {
+  background: #ffffff;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #ffffff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hexagon {
+  clip-path: polygon(
+    25% 6.7%,
+    75% 6.7%,
+    100% 50%,
+    75% 93.3%,
+    25% 93.3%,
+    0% 50%
+  );
+}
+
+.crop-circle {
+  overflow: hidden;
+  border-radius: 9999px; /* fully round */
+  position: relative;
+}
+
+.crop-img {
+  object-fit: cover;
+  filter: grayscale(100%);
+}

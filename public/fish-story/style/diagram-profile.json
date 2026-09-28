@@ -1,0 +1,78 @@
+{
+  "profile": "static-diagram",
+  "description": "Context profile for generating static diagrams. Visual language derived from the contour line-art illustrations (flowing parallel lines forming biomorphic shapes).",
+  "inherits": "style-profile.json",
+
+  "diagram_language": {
+    "technique": "parallel contour lines",
+    "inspiration": "The flowing line-art references: dense parallel curves that build form through spacing variation — tight lines create dark/dense areas, spread lines create light/open areas",
+    "line_weight_range": [0.3, 1.8],
+    "line_count_typical": [30, 80],
+    "line_spacing_logic": "Variable — compression conveys depth, shadow, and mass; expansion conveys lightness and surface"
+  },
+
+  "rendering_style": {
+    "stroke_color_modes": [
+      {
+        "mode": "monochrome",
+        "stroke": "#111111",
+        "background": "#F5F3EE",
+        "use_case": "Structural / anatomical diagrams"
+      },
+      {
+        "mode": "warm-glow",
+        "stroke": "#FF6B6B",
+        "stroke_fade": "#FFB4A8",
+        "background": "#1A1C2A",
+        "use_case": "Process or flow diagrams with warm emphasis"
+      },
+      {
+        "mode": "cool-contour",
+        "stroke": "#3AAFB9",
+        "stroke_fade": "#A8E6E6",
+        "background": "#EDF0F5",
+        "use_case": "Data taxonomy or hierarchy diagrams"
+      }
+    ],
+    "opacity_range": [0.15, 1.0],
+    "line_cap": "round",
+    "line_join": "round"
+  },
+
+  "composition": {
+    "alignment": "center-weighted",
+    "negative_space": "generous — form floats in space, never fills the frame edge-to-edge",
+    "aspect_ratios": ["16:9", "4:3", "1:1"],
+    "margin_ratio": 0.15,
+    "reflection": {
+      "enabled": "optional",
+      "description": "A mirrored ghost of the form below the baseline at reduced opacity (ref: image 1 whale/leaf form)",
+      "opacity": 0.25,
+      "vertical_offset": "4% of canvas height"
+    }
+  },
+
+  "annotation_style": {
+    "label_font": "DM Mono",
+    "label_size": "0.75rem",
+    "label_color": "#444444",
+    "connector_style": "single hairline, no arrowhead or with minimal open arrowhead",
+    "connector_weight": 0.5,
+    "placement": "outside the form boundary, generous gap"
+  },
+
+  "export_formats": ["SVG", "PNG@2x"],
+
+  "do": [
+    "Let lines breathe — not every area needs to be dense",
+    "Use line compression to simulate shadow organically",
+    "Keep the silhouette readable at thumbnail size",
+    "Allow slight irregularity in line curves for an organic feel"
+  ],
+  "dont": [
+    "Use fills or solid shapes — only strokes",
+    "Add drop shadows or glows on the lines themselves",
+    "Use sharp corners or right angles",
+    "Clutter with excessive labels"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "profile": "main-style",
+  "description": "Global design language for the interactive data website. Derived from blurred silhouette color imagery and contour line-art references.",
+
+  "aesthetic": {
+    "direction": "scientific-sublime",
+    "tone": "refined minimal with atmospheric depth",
+    "keywords": ["biomorphic", "contour", "luminous", "grainy", "soft-focus", "precise lines", "organic geometry"]
+  },
+
+  "color": {
+    "palette_origin": "Blurred silhouette images — warm and cool registers extracted",
+    "background": {
+      "primary": "#E8EAF0",
+      "secondary": "#F0EEF0",
+      "dark_variant": "#1A1C2A"
+    },
+    "warm_register": {
+      "coral_core":    "#FF6B6B",
+      "salmon_glow":   "#FF8C7A",
+      "blush_light":   "#FFB4A8",
+      "lavender_edge": "#C4B8D8",
+      "hot_center":    "#FF4560"
+    },
+    "cool_register": {
+      "aqua_core":     "#5ECBCB",
+      "teal_mid":      "#3AAFB9",
+      "deep_blue":     "#2D5FAA",
+      "mint_light":    "#A8E6E6",
+      "navy_shadow":   "#1B3B6F"
+    },
+    "neutral": {
+      "line_dark":     "#111111",
+      "line_mid":      "#444444",
+      "line_light":    "#AAAAAA",
+      "surface_warm":  "#F5F3EE",
+      "surface_cool":  "#EDF0F5"
+    },
+    "gradients": {
+      "warm_glow":  "radial-gradient(ellipse at center, #FF6B6B 0%, #C4B8D8 55%, #8A9BC4 100%)",
+      "cool_glow":  "radial-gradient(ellipse at center, #A8E6E6 0%, #3AAFB9 40%, #2D5FAA 80%, #1B3B6F 100%)",
+      "neutral_bg": "linear-gradient(160deg, #F0EEF0 0%, #E0E4EC 100%)"
+    }
+  },
+
+  "texture": {
+    "grain": {
+      "enabled": true,
+      "description": "Fine photographic grain overlaid at low opacity, referencing the noise texture visible in the silhouette images",
+      "opacity": 0.04,
+      "implementation": "SVG feTurbulence filter or CSS noise overlay"
+    },
+    "blur_depth": {
+      "enabled": true,
+      "description": "Soft radial blur on background elements to create depth, inspired by the out-of-focus silhouettes",
+      "radius_range_px": [20, 80]
+    }
+  },
+
+  "typography": {
+    "display": {
+      "family": "Playfair Display",
+      "weight": 300,
+      "style": "italic",
+      "role": "Hero titles, section headers"
+    },
+    "mono": {
+      "family": "DM Mono",
+      "weight": 400,
+      "role": "Data labels, axis ticks, numeric values"
+    },
+    "body": {
+      "family": "Cormorant Garamond",
+      "weight": 400,
+      "role": "Descriptions, annotations, captions"
+    },
+    "scale": {
+      "xs":  "0.75rem",
+      "sm":  "0.875rem",
+      "base":"1rem",
+      "lg":  "1.25rem",
+      "xl":  "2rem",
+      "2xl": "3.5rem",
+      "3xl": "5.5rem"
+    }
+  },
+
+  "spacing": {
+    "unit": 8,
+    "layout_max_width": "1440px",
+    "section_padding_y": "120px",
+    "content_padding_x": "64px"
+  },
+
+  "motion": {
+    "easing_organic": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+    "easing_reveal":  "cubic-bezier(0.16, 1, 0.3, 1)",
+    "duration_fast":  "200ms",
+    "duration_mid":   "600ms",
+    "duration_slow":  "1200ms",
+    "principles": [
+      "Staggered line reveals mimicking the contour drawing aesthetic",
+      "Glow pulses on hover using warm or cool palette register",
+      "Grain texture fades in during transitions"
+    ]
+  },
+
+  "css_variables": {
+    "--bg":           "#E8EAF0",
+    "--bg-dark":      "#1A1C2A",
+    "--warm":         "#FF6B6B",
+    "--warm-light":   "#FFB4A8",
+    "--cool":         "#3AAFB9",
+    "--cool-light":   "#A8E6E6",
+    "--line":         "#111111",
+    "--line-mid":     "#666666",
+    "--accent-warm":  "#FF4560",
+    "--accent-cool":  "#2D5FAA",
+    "--font-display": "'Playfair Display', Georgia, serif",
+    "--font-mono":    "'DM Mono', 'Courier New', monospace",
+    "--font-body":    "'Cormorant Garamond', Georgia, serif",
+    "--ease-organic": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+    "--grain-opacity":"0.04"
+  }
+}
