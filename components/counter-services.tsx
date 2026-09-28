@@ -8,7 +8,7 @@ const CounterServices = () => {
       <ProfileCard />
 
       <div className="md:col-span-2 flex flex-col gap-6">
-        <p className="text-lg text-gray-700 mt-8">
+        <p className="text-lg text-secondary mt-8">
             I blend Art and Engineering to propose a look into a future where
             nature, humans, and technology thrive in synchrony.
         </p>
@@ -22,7 +22,7 @@ const CounterServices = () => {
               <p className="text-4xl md:text-4xl font-bold text-secondary mb-1">
                 + <CountUp end={endCounter} start={0} duration={5} />
               </p>
-              <p className="text-black text-sm md:text-base uppercase">{text}</p>
+              <p className="text-foreground text-sm md:text-base uppercase">{text}</p>
             </div>
           ))}
         </div>

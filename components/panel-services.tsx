@@ -15,7 +15,7 @@ const PanelServices = () => {
                                 style={{ backgroundImage: `url(${item.image})` }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 rounded-lg"></div>
-                                <h3 className="relative mb-4 text-lg text-white z-10">{item.title}</h3>
+                                <h3 className="relative mb-4 text-lg text-foreground z-10">{item.title}</h3>
                             </div>
                         </Link>
                     </div>

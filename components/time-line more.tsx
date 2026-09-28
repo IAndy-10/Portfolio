@@ -24,7 +24,7 @@ interface TimeLineSectionProps {
 // Section component using NEW FORMAT
 const TimeLineSection: FC<TimeLineSectionProps> = ({ title, data, noTopMargin, style }) => (
     <div className={`my-10 ${noTopMargin ? 'mt-0' : 'mt-10'}`}>
-        <h2 className="text-black mb-4 text-2xl font-bold" style={style}>
+        <h2 className="text-foreground mb-4 text-2xl font-bold" style={style}>
             {title}
         </h2>
 
@@ -34,14 +34,14 @@ const TimeLineSection: FC<TimeLineSectionProps> = ({ title, data, noTopMargin, s
 
                     {/* Row 1: Title*/}
                     <div className="flex items-center gap-3 justify-left">
-                        <h3 className="text-black text-xl font-bold">
+                        <h3 className="text-foreground text-xl font-bold">
                             {item.title}
                         </h3>
                     </div>
 
                     {/* Row 2: Subtitle + Date */}
                     <div className="flex items-center gap-3 mt-1">
-                        <div className="text-lg font-semibold text-gray-400">
+                        <div className="text-lg font-semibold text-secondary">
                             {item.subtitle}
                         </div>
 

@@ -12,7 +12,7 @@ const Introduction = () => {
             <div className="min-h-screen flex flex-col justify-center items-center">
                 <div className="z-20 grid items-center h-full p-6 md:py-0 md:grid-cols-2 gap-6">
                     <div className="flex flex-col justify-start items-start max-w-md mx-auto text-left">
-                        <h1 className="text-black mb-5 text-xl leading-tight md:text-4xl md:mb-10 font-semibold">
+                        <h1 className="text-foreground mb-5 text-xl leading-tight md:text-4xl md:mb-10 font-semibold">
                             Welcome, I'm Italo Rojas
                         </h1>
                         <p className="text-secondary text-xl ">
@@ -44,7 +44,7 @@ const Introduction = () => {
             {/* Desktop: hexagon grid */}
             <div className="hidden md:block w-full relative flex items-center justify-center">
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
-                    <h2 className="text-black text-4xl font-bold">PROJECTS</h2>
+                    <h2 className="text-foreground text-4xl font-bold">PROJECTS</h2>
                     <p className="text-secondary text-2xl text-center">Sound & Interaction · Data & Science</p>
                 </div>
                 <div className="relative z-0">
@@ -59,7 +59,7 @@ const Introduction = () => {
             {/* About Me Section */}
             <div className="w-full py-20">
                 <div className="text-center">
-                    <h2 className="text-4xl font-bold text-black">About Me</h2>
+                    <h2 className="text-4xl font-bold text-foreground">About Me</h2>
                     <div className="w-20 h-1 mx-auto my-4 bg-secondary mb-6"></div>
                 </div>
                 <div className="min-h-full flex flex-col justify-center items-center pt-0">

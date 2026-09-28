@@ -91,7 +91,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {slug === "aquifuturo" && hasVideo && (
                 <section className="space-y-4">
                   <h2 className="text-2xl font-semibold text-primary">Preview</h2>
-                  <div className="w-full overflow-hidden rounded-lg bg-gray-100">
+                  <div className="w-full overflow-hidden rounded-lg bg-surface-alt">
                     <video controls className="w-full" style={{ maxHeight: "520px" }}>
                       <source src={(project as any).video} type="video/quicktime" />
                       <source src={(project as any).video} type="video/mp4" />
@@ -140,7 +140,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   {/* Images */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {project.images.map((img, i) => (
-                      <div key={i} className="w-full h-64 relative overflow-hidden rounded-lg bg-gray-100">
+                      <div key={i} className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
                         <Image src={img} alt={`${project.title} ${i + 1}`} fill quality={95} className="object-cover" />
                       </div>
                     ))}
@@ -151,11 +151,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {/* === Standard Images (skip for neochucao which handles its own, aquifuturo which has no images, reverbo which has single image) === */}
               {slug === "reverbo" && project.images.length > 0 && (
                 <>
-                  <div className="w-full h-64 relative overflow-hidden rounded-lg bg-gray-100">
+                  <div className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
                     <Image src={project.images[0]} alt={project.title} fill className="object-cover" />
                   </div>
                   {hasVideo && (
-                    <div className="w-full overflow-hidden rounded-lg bg-black">
+                    <div className="w-full overflow-hidden rounded-lg bg-background">
                       <video src={(project as any).video} controls className="w-full" />
                     </div>
                   )}
@@ -164,10 +164,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
               {slug === "yoterra" && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="w-full h-64 relative overflow-hidden rounded-lg bg-gray-100">
+                  <div className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
                     <Image src="/fungamorpho1.png" alt="Funga Morpho 1" fill className="object-cover" />
                   </div>
-                  <div className="w-full h-64 relative overflow-hidden rounded-lg bg-gray-100">
+                  <div className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
                     <Image src="/fungamorpho2.png" alt="Funga Morpho 2" fill className="object-cover" />
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {(slug === "a-fish-story") && project.images.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {project.images.map((img, i) => (
-                    <div key={i} className="w-full h-64 relative overflow-hidden rounded-lg bg-gray-100">
+                    <div key={i} className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
                       <Image src={img} alt={`${project.title} ${i + 1}`} fill className="object-cover" />
                     </div>
                   ))}
@@ -197,7 +197,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {(slug === "sustainability-strategy" || slug === "vestaesg") && project.images.length > 0 && (
                 <div className="grid grid-cols-3 gap-4">
                   {project.images.map((img, i) => (
-                    <div key={i} className="w-full h-48 relative overflow-hidden rounded-lg bg-gray-100">
+                    <div key={i} className="w-full h-48 relative overflow-hidden rounded-lg bg-surface-alt">
                       <Image src={img} alt={`${project.title} ${i + 1}`} fill className="object-cover" />
                     </div>
                   ))}
@@ -303,7 +303,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     href={(project as any).siteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block border border-secondary text-secondary px-6 py-2 text-sm uppercase tracking-widest hover:bg-secondary hover:text-white transition-colors"
+                    className="inline-block border border-secondary text-secondary px-6 py-2 text-sm uppercase tracking-widest hover:bg-secondary hover:text-background transition-colors"
                   >
                     Visit Site
                   </a>

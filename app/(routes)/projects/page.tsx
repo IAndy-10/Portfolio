@@ -12,7 +12,7 @@ const ProjectsPage = () => {
                 <TransitionPage />
                 <div className="text-center mt-10 mb-12 px-4">
                     <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-6">
-                        <span className="font-bold text-black">Projects</span>
+                        <span className="font-bold text-foreground">Projects</span>
                     </h1>
                 </div>
                 <br/>

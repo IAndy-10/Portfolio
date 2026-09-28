@@ -11,13 +11,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        secondary: "#A9A9A9",
-        darkBg: "#131424",
-        primary: "#000000",
-      },
-      backgroundImage: {
-        "gradient-cover":
-          "linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%)",
+        background: "#0B0F14",
+        surface: "#111810",
+        "surface-alt": "#1A2026",
+        foreground: "#E8E0CA",
+        secondary: "#9AA0A6",
+        accent: "#4F68FF",
+        "accent-soft": "#E9ECFF",
+        border: "#2A2F38",
+        primary: "#E8E0CA",
+        darkBg: "#0B0F14",
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "sans-serif"],

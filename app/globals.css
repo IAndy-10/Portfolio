@@ -17,10 +17,9 @@ html {
 }
 html,
 body {
-  /* height: 100%; */
   font-family: var(--font-poppins), sans-serif;
-  color: #000000;
-  background: #ffffff;
+  color: #E8E0CA;
+  background: #0B0F14;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-  background: #ffffff;
+  background: #0B0F14;
   height: 100vh;
   height: 100dvh;
 }
@@ -36,7 +35,7 @@ main {
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  background-color: #ffffff;
+  background-color: #E8E0CA;
 }
 
 @layer utilities {

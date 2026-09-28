@@ -19,7 +19,7 @@ const AboutMePage = () => {
                 {/* Intro más pequeña tipo portfolio */}
                 <div className="text-center mt-10 mb-12 px-4">
                     <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-6">
-                        <span className="font-bold text-black">About</span>
+                        <span className="font-bold text-foreground">About</span>
                     </h1>
                 </div>
                 <br/>
@@ -37,7 +37,7 @@ const AboutMePage = () => {
                     </div>
                 </div>
 
-                <hr className="border-t-1 border-gray-300 my-12 mx-auto" />
+                <hr className="border-t-1 border-border my-12 mx-auto" />
 
                 {/* ---- Education ---- */}
                 <div className="mt-16 space-y-4">
@@ -50,7 +50,7 @@ const AboutMePage = () => {
                     </div>
                 </div>
 
-                <hr className="border-t-1 border-gray-300 my-12 mx-auto" />
+                <hr className="border-t-1 border-border my-12 mx-auto" />
 
                 {/* ---- Teaching ---- */}
                 <div className="mt-16 space-y-4">
@@ -63,7 +63,7 @@ const AboutMePage = () => {
                     </div>
                 </div>
 
-                <hr className="border-t-1 border-gray-300 my-12 mx-auto" />
+                <hr className="border-t-1 border-border my-12 mx-auto" />
 
                 {/* ---- More About Me ---- */}
                 <div className="mt-16 space-y-4">
@@ -76,7 +76,7 @@ const AboutMePage = () => {
                     </div>
                 </div>
 
-                <hr className="border-t-1 border-gray-300 my-12 mx-auto" />
+                <hr className="border-t-1 border-border my-12 mx-auto" />
 
                 {/* ---- Contact ---- */}
                 <div className="mt-16 space-y-4 mb-24">

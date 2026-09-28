@@ -39,13 +39,13 @@ const SliderServices = () => {
                                 style={{ backgroundImage: `url(${item.image})` }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 rounded-lg"></div>
-                                <h3 className="relative mb-4 text-lg text-white z-10">{item.title}</h3>
+                                <h3 className="relative mb-4 text-lg text-foreground z-10">{item.title}</h3>
                             </div>
                         </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="swiper-pagination absolute bottom-0 left-0 right-0 mb-4 text-black"></div>
+            <div className="swiper-pagination absolute bottom-0 left-0 right-0 mb-4 text-foreground"></div>
         </div>
     );
 }

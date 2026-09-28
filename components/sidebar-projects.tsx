@@ -5,7 +5,7 @@ import { dataPortfolio_Engineer, dataPortfolio_Artist } from "../data";
 
 export default function SidebarProjects() {
   return (
-    <aside className="hidden md:block w-64 p-4 border-r border-gray-200 h-screen overflow-y-auto">
+    <aside className="hidden md:block w-64 p-4 border-r border-border h-screen overflow-y-auto">
       <h2 className="text-xl font-bold mb-4">Projects</h2>
 
       {/* Sound & Interaction */}
@@ -16,7 +16,7 @@ export default function SidebarProjects() {
             <li key={project.id}>
               <Link
                 href={`/projects/${project.slug}`}
-                className="text-secondary hover:text-black transition-colors"
+                className="text-secondary hover:text-foreground transition-colors"
               >
                 {project.title}
               </Link>
@@ -33,7 +33,7 @@ export default function SidebarProjects() {
             <li key={project.id}>
               <Link
                 href={`/projects/${project.slug}`}
-                className="text-secondary hover:text-black transition-colors"
+                className="text-secondary hover:text-foreground transition-colors"
               >
                 {project.title}
               </Link>

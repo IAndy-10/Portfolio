@@ -10,14 +10,14 @@ const Header = () => {
                 <div className="container justify-between max-w-6xl mx-auto md:flex">
                     <Link href='/'>
                         <h1 className="my-3 text-4xl font-bold text-center md:text-left">
-                        <span className="text-black">Italo</span>                            <span className="text-secondary">Rojas</span>
+                        <span className="text-foreground">Italo</span>                            <span className="text-secondary">Rojas</span>
                         </h1>
                     </Link>
                     <div className=" flex items-center justify-center gap-7">
-                        <Link href="/projects" className="text-secondary text-lg md:text-2xl transition-all duration-300 hover:text-black">
+                        <Link href="/projects" className="text-secondary text-lg md:text-2xl transition-all duration-300 hover:text-foreground">
                             Projects
                         </Link>
-                        <Link href="/about-me" className="text-secondary text-lg md:text-2xl transition-all duration-300 hover:text-black">
+                        <Link href="/about-me" className="text-secondary text-lg md:text-2xl transition-all duration-300 hover:text-foreground">
                             About
                         </Link>
                     </div>

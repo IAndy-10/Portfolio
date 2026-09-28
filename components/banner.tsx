@@ -8,7 +8,7 @@ const Banner = () => {
       {/* Bottom-right container for text and icons */}
       <div className="absolute bottom-4 right-4 flex items-center gap-4">
         {/* "More Information" text */}
-        <div className="text-black text-sm mb-1">More Information</div>
+        <div className="text-foreground text-sm mb-1">More Information</div>
 
         {/* Realiza image link */}
         <a
@@ -33,17 +33,17 @@ const Banner = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin size={24} strokeWidth={1} className="text-black mb-1" />
+          <Linkedin size={24} strokeWidth={1} className="text-foreground mb-1" />
         </a>
       </div>
 
       {/* Bottom-left author text */}
-      <div className="absolute bottom-4 left-4 text-black text-sm mb-2">
+      <div className="absolute bottom-4 left-4 text-foreground text-sm mb-2">
         Italo Rojas 2026
       </div>
 
       {/* Optional separator line */}
-      <hr className="border-t border-gray-300 absolute bottom-0 w-full" />
+      <hr className="border-t border-border absolute bottom-0 w-full" />
     </div>
   );
 };

@@ -19,7 +19,7 @@ export default function ProjectMobileDisplay() {
     <div className="md:hidden w-full py-10">
       {/* Section header */}
       <div className="text-center mb-8 px-4">
-        <h2 className="text-black text-3xl font-bold">PROJECTS</h2>
+        <h2 className="text-foreground text-3xl font-bold">PROJECTS</h2>
         <p className="text-secondary text-base mt-1">Sound & Interaction · Data & Science</p>
       </div>
 
@@ -47,10 +47,10 @@ export default function ProjectMobileDisplay() {
                   style={{ backgroundImage: `url(${item.backgroundImage})` }}
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-[#A6A6A6] bg-opacity-80 group-hover:bg-opacity-20 transition-all duration-300" />
+                <div className="absolute inset-0 bg-secondary bg-opacity-80 group-hover:bg-opacity-20 transition-all duration-300" />
                 {/* Name */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-bold text-xs text-center px-2 relative z-10 leading-tight">
+                  <span className="text-foreground font-bold text-xs text-center px-2 relative z-10 leading-tight">
                     {item.name}
                   </span>
                 </div>

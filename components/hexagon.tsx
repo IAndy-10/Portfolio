@@ -57,11 +57,11 @@ function Hexagon({ data, className = "" }: HexagonProps) {
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-[#A6A6A6] bg-opacity-90 group-hover:bg-opacity-20 transition-all duration-300" />
+          <div className="absolute inset-0 bg-secondary bg-opacity-90 group-hover:bg-opacity-20 transition-all duration-300" />
           
           {/* Nombre */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-white font-bold text-sm text-center px-2 relative z-10">
+            <span className="text-foreground font-bold text-sm text-center px-2 relative z-10">
               {data.name}
             </span>
           </div>
