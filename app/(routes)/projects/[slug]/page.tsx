@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     <span key={tool} className="text-xs border border-secondary text-secondary px-3 py-1 rounded-full">{tool}</span>
                   ))}
                 </div>
-                {slug === "aquifuturo" && (
+                {project.status === "in-development" && (
                   <div className="mt-5 inline-flex items-center gap-2 border border-secondary bg-secondary/10 text-secondary text-sm font-medium px-4 py-2 rounded-full">
                     <span className="w-2 h-2 rounded-full bg-secondary animate-pulse inline-block" />
                     Work in progress
