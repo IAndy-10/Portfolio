@@ -241,7 +241,7 @@ export const dataPortfolio_Artist = [
         status: "in-development",
         repository: "https://github.com/IAndy-10/Reverbo",
         images: ["/Reverbo.png"],
-        video: "/reverbo.mov",
+        video_url: "https://www.youtube.com/embed/jMqBMv3HgVA",
     },
     {
         id: 4,
@@ -350,7 +350,7 @@ export const dataPortfolio_Artist = [
         status: "complete",
         repository: "",
         images: [],
-        video: "/AquiFuturo.mov",
+        video: "/AquiFuturo.mp4",
     },
     {
         id: 8,

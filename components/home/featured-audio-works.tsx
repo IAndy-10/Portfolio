@@ -72,8 +72,8 @@ export default function FeaturedAudioWorks() {
             <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
                 {featuredProjects.map((project, index) => {
                     const videoFile =
-                        (project as any).video ||
                         (project as any).video_url ||
+                        (project as any).video ||
                         null;
                     const num = String(index + 1).padStart(2, "0");
 

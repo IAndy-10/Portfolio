@@ -154,9 +154,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   <div className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
                     <Image src={project.images[0]} alt={project.title} fill className="object-cover" />
                   </div>
-                  {hasVideo && (
-                    <div className="w-full overflow-hidden rounded-lg bg-background">
-                      <video src={(project as any).video} controls className="w-full" />
+                  {(project as any).video_url && (
+                    <div className="w-full aspect-video overflow-hidden rounded-lg bg-background">
+                      <iframe
+                        src={(project as any).video_url}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
                     </div>
                   )}
                 </>
