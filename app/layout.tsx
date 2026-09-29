@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
@@ -27,9 +26,12 @@ const helveticaNeue = localFont({
   variable: "--font-helvetica",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
+const jetbrainsMono = localFont({
+  src: [
+    { path: "../public/fonts/JetBrainsMono-Light.ttf", weight: "300" },
+    { path: "../public/fonts/JetBrainsMono-Regular.ttf", weight: "400" },
+    { path: "../public/fonts/JetBrainsMono-Medium.ttf", weight: "500" },
+  ],
   variable: "--font-mono",
 });
 
