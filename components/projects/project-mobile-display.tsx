@@ -19,7 +19,7 @@ export default function ProjectMobileDisplay() {
     <div className="md:hidden w-full py-10">
       {/* Section header */}
       <div className="text-center mb-8 px-4">
-        <h2 className="text-foreground text-3xl font-bold">PROJECTS</h2>
+        <h2 className="text-foreground text-3xl font-normal">PROJECTS</h2>
         <p className="text-secondary text-base mt-1">Sound & Interaction · Data & Science</p>
       </div>
 

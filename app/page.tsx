@@ -1,8 +1,8 @@
 "use client"
 
-import Introduction from "@/components/introduction";
-import TransitionPage from "@/components/transition-page";
-import Banner from "@/components/banner";
+import Introduction from "@/components/home/introduction";
+import TransitionPage from "@/components/ui/transition-page";
+import Banner from "@/components/ui/banner";
 
 export default function Home() {
   return (

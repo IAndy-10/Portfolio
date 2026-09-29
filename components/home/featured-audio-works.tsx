@@ -104,12 +104,12 @@ export default function FeaturedAudioWorks() {
                             </span>
 
                             {/* Title */}
-                            <h3 className="text-foreground text-2xl font-light mt-1.5 mb-3">
+                            <h3 className="text-foreground text-2xl font-normal mt-1.5 mb-3">
                                 {project.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
+                            <p className="text-secondary text-sm font-light leading-relaxed mb-4 line-clamp-3">
                                 {project.subtitle}
                             </p>
 

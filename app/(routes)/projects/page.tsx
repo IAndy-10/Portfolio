@@ -1,8 +1,8 @@
-import TransitionPage from "@/components/transition-page";
-import ContainerPage from "@/components/container-page";
-import Banner from "@/components/banner";
-import HexagonalGrid from "@/components/hexagon";
-import ProjectMobileDisplay from "@/components/project-mobile-display";
+import TransitionPage from "@/components/ui/transition-page";
+import ContainerPage from "@/components/ui/container-page";
+import Banner from "@/components/ui/banner";
+import HexagonalGrid from "@/components/projects/hexagon";
+import ProjectMobileDisplay from "@/components/projects/project-mobile-display";
 
 
 const ProjectsPage = () => {
@@ -12,7 +12,7 @@ const ProjectsPage = () => {
                 <TransitionPage />
                 <div className="text-center mt-10 mb-12 px-4">
                     <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-6">
-                        <span className="font-bold text-foreground">Projects</span>
+                        <span className=" text-foreground font-normal">Projects</span>
                     </h1>
                 </div>
                 <br/>

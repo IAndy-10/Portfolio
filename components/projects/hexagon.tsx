@@ -36,42 +36,33 @@ interface HexagonalGridProps {
 }
 // Componente Hexagon que recibe data
 function Hexagon({ data, className = "" }: HexagonProps) {
-  
   return (
-    <div className="transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(233,236,255,0.5)]">
-    <Link href={data.link}>
+    <Link href={data.link} className="block">
       <div
-        className={`
-          relative
-          ${className}
-        `}
+        className={`relative group ${className}`}
         style={{
           width: `${hexSize.width}px`,
           height: `${hexSize.height}px`,
           clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
         }}
       >
-        <div 
-          className="w-full h-full bg-cover bg-center relative group"
+        <div
+          className="w-full h-full bg-cover bg-center relative group-hover:scale-[1.03] transition-transform duration-700 ease-out"
           style={{
             backgroundImage: `url(${data.backgroundImage})`,
           }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-secondary bg-opacity-90 group-hover:bg-opacity-0 transition-all duration-300" />
-          {/* Blue tint on hover */}
-          <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-80 transition-all duration-300" />
-          
-          {/* Nombre */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-background group-hover:text-white font-mono font-medium text-sm text-center px-2 relative z-10 transition-colors duration-300">
-              {data.name}
-            </span>
-          </div>
+        />
+        {/* Overlay — warm foreground tint, fades on hover */}
+        <div className="absolute inset-0 bg-foreground/80 group-hover:bg-foreground/20 transition-all duration-500" />
+
+        {/* Name */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-background group-hover:text-white font-normal text-sm tracking-wide text-center px-3 relative z-10 transition-colors duration-500">
+            {data.name}
+          </span>
         </div>
       </div>
     </Link>
-    </div>
   );
 }
 

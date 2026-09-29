@@ -2,13 +2,13 @@
 
 "use client"
 
-import ContainerPage from "@/components/container-page";
+import ContainerPage from "@/components/ui/container-page";
 import { dataAboutPage, dataAboutPage_Ed, dataAboutPage_Teaching } from "@/data";
-import CounterServices from "@/components/counter-services";
-import TimeLine from "@/components/time-line";
-import TimeLine_More from "@/components/time-line more";
-import TransitionPage from "@/components/transition-page";
-import Banner from "@/components/banner";
+import CounterServices from "@/components/about/counter-services";
+import TimeLine from "@/components/about/time-line";
+import TimeLine_More from "@/components/about/time-line more";
+import TransitionPage from "@/components/ui/transition-page";
+import Banner from "@/components/ui/banner";
 
 const AboutMePage = () => {
     return (
@@ -19,7 +19,7 @@ const AboutMePage = () => {
                 {/* Intro más pequeña tipo portfolio */}
                 <div className="text-center mt-10 mb-12 px-4">
                     <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-6">
-                        <span className="font-bold text-foreground">About</span>
+                        <span className="font-normal text-foreground">About</span>
                     </h1>
                 </div>
                 <br/>
@@ -28,7 +28,7 @@ const AboutMePage = () => {
 
                 {/* ---- Work Experience ---- */}
                 <div className="mt-16 space-y-4">
-                    <h2 className="text-primary text-xl md:text-3xl font-bold text-left">
+                    <h2 className="text-primary text-xl md:text-3xl font-normal text-left">
                         Work Experience
                     </h2>
 
@@ -41,7 +41,7 @@ const AboutMePage = () => {
 
                 {/* ---- Education ---- */}
                 <div className="mt-16 space-y-4">
-                    <h2 className="text-primary text-xl md:text-3xl font-bold text-left">
+                    <h2 className="text-primary text-xl md:text-3xl font-normal text-left">
                         Education
                     </h2>
 
@@ -54,7 +54,7 @@ const AboutMePage = () => {
 
                 {/* ---- Teaching ---- */}
                 <div className="mt-16 space-y-4">
-                    <h2 className="text-primary text-xl md:text-3xl font-bold text-left">
+                    <h2 className="text-primary text-xl md:text-3xl font-normal text-left">
                         Teaching
                     </h2>
 
@@ -67,7 +67,7 @@ const AboutMePage = () => {
 
                 {/* ---- More About Me ---- */}
                 <div className="mt-16 space-y-4">
-                    <h2 className="text-primary text-xl md:text-3xl font-bold text-left">
+                    <h2 className="text-primary text-xl md:text-3xl font-normal text-left">
                         More About Me
                     </h2>
 
@@ -80,7 +80,7 @@ const AboutMePage = () => {
 
                 {/* ---- Contact ---- */}
                 <div className="mt-16 space-y-4 mb-24">
-                    <h2 className="text-primary text-xl md:text-3xl font-bold text-left">
+                    <h2 className="text-primary text-xl md:text-3xl font-normal text-left">
                         Contact
                     </h2>
                     <a

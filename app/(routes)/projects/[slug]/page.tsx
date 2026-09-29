@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import { dataPortfolio_Artist, dataPortfolio_Engineer } from "@/data";
-import TransitionPage from "@/components/transition-page";
-import ContainerPage from "@/components/container-page";
-import Banner from "@/components/banner";
-import SidebarProjects from "@/components/sidebar-projects";
-import ProjectMobileDisplay from "@/components/project-mobile-display";
+import TransitionPage from "@/components/ui/transition-page";
+import ContainerPage from "@/components/ui/container-page";
+import Banner from "@/components/ui/banner";
+import SidebarProjects from "@/components/projects/sidebar-projects";
+import ProjectMobileDisplay from "@/components/projects/project-mobile-display";
 import Image from "next/image";
-import YoTerraPoem from "@/components/yoterra-poem";
+import YoTerraPoem from "@/components/projects/yoterra-poem";
 
 const allProjects = [...dataPortfolio_Artist, ...dataPortfolio_Engineer];
 

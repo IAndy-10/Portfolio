@@ -22,17 +22,17 @@ const TimeLine = ({ data }: TimeLineProps) => {
                         >
                             {/* Row 1: Title + Date */}
                             <div className="flex items-center gap-3">
-                                <h3 className="text-foreground text-xl font-bold">
+                                <h3 className="text-foreground text-xl font-normal">
                                     {item.title}
                                 </h3>
 
-                                <time className="inline-flex items-center justify-center text-xs font-semibold px-3 h-6 text-emerald-600 bg-emerald-100 rounded-full">
+                                <time className="inline-flex items-center justify-center text-xs font-normal px-3 h-6 text-emerald-600 bg-emerald-100 rounded-full">
                                     {item.date}
                                 </time>
                             </div>
 
                             {/* Row 2: Subtitle */}
-                            <div className="text-lg font-semibold text-secondary mt-1">
+                            <div className="text-lg font-normal text-secondary mt-1">
                                 {item.subtitle}
                             </div>
 

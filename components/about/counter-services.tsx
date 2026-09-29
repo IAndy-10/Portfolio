@@ -1,6 +1,6 @@
 import { dataCounter } from "@/data";
 import CountUp from "react-countup";
-import ProfileCard from "@/components/profile-card";
+import ProfileCard from "@/components/ui/profile-card";
 
 const CounterServices = () => {
   return (
@@ -19,7 +19,7 @@ const CounterServices = () => {
               key={id}
               className="flex flex-col items-center text-center"
             >
-              <p className="text-4xl md:text-4xl font-bold text-secondary mb-1">
+              <p className="text-4xl md:text-4xl font-normal text-secondary mb-1">
                 + <CountUp end={endCounter} start={0} duration={5} />
               </p>
               <p className="text-foreground text-sm md:text-base uppercase">{text}</p>

@@ -7,12 +7,24 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import Header from "@/components/header";
+import Header from "@/components/ui/header";
 
 const helveticaNeue = localFont({
-  src: "../public/fonts/HelveticaNeueLTPro-Thin.otf",
+  src: [
+    {
+      path: "../public/fonts/HelveticaNeueLTPro-Thin.otf",
+      weight: "200",
+    },
+    {
+      path: "../public/fonts/HelveticaNeueLTW0555Roman.otf",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/HelveticaNeueLTW0585Heavy.otf",
+      weight: "800",
+    },
+  ],
   variable: "--font-helvetica",
-  weight: "200",
 });
 
 const jetbrainsMono = JetBrains_Mono({

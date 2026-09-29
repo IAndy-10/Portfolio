@@ -225,7 +225,7 @@ export const dataPortfolio_Artist = [
         ],
         status: "in-development",
         repository: "https://github.com/IAndy-10/PosTalk",
-        images: ["/fungi1.jpg"],
+        images: ["/postalk-1.png"],
         video_url: "https://www.youtube.com/embed/jO9crDHlqVA",
     },
     {
@@ -468,42 +468,14 @@ export const dataPortfolio_Engineer = [
 ];
 
 export const hexagonData = [
+    // Row 0: cols 1, 3, 5 (left, center, right)
     {
         id: 0,
         name: "PostTalk",
-        backgroundImage: "/fungi1.jpg",
+        backgroundImage: "/postalk-1.png",
         link: "/projects/posttalk",
         type: "Sound & Interaction",
         visible: false,
-    },
-    {
-        id: 1,
-        name: "A Fish Story",
-        backgroundImage: "/AFishStory1.png",
-        link: "/projects/a-fish-story",
-        type: "Data & Science",
-    },
-    {
-        id: 2,
-        name: "Reverbo",
-        backgroundImage: "/Reverbo.png",
-        link: "/projects/reverbo",
-        type: "Sound & Interaction",
-        visible: false,
-    },
-    {
-        id: 3,
-        name: "Sustainability Strategy",
-        backgroundImage: "/proyecto-aysen1.png",
-        link: "/projects/sustainability-strategy",
-        type: "Data & Science",
-    },
-    {
-        id: 5,
-        name: "VestaESG",
-        backgroundImage: "/proyecto-carbono4.png",
-        link: "/projects/vestaesg",
-        type: "Data & Science",
     },
     {
         id: 6,
@@ -513,18 +485,18 @@ export const hexagonData = [
         type: "Sound & Interaction",
     },
     {
-        id: 7,
-        name: "Perkung-fu",
-        backgroundImage: "/perkung-fu-1.png",
-        link: "/projects/perkung-fu",
-        type: "Sound & Interaction",
-        visible: false,
+        id: 1,
+        name: "A Fish Story",
+        backgroundImage: "/AFishStory1.png",
+        link: "/projects/a-fish-story",
+        type: "Data & Science",
     },
+    // Row 1: cols 0, 2, 4 (left, center, right)
     {
-        id: 8,
-        name: "NeoChucao",
-        backgroundImage: "/NeoChucao.png",
-        link: "/projects/neochucao",
+        id: 2,
+        name: "Reverbo",
+        backgroundImage: "/Reverbo.png",
+        link: "/projects/reverbo",
         type: "Sound & Interaction",
         visible: false,
     },
@@ -536,10 +508,42 @@ export const hexagonData = [
         type: "Sound & Interaction",
     },
     {
+        id: 3,
+        name: "Sustainability Strategy",
+        backgroundImage: "/proyecto-aysen1.png",
+        link: "/projects/sustainability-strategy",
+        type: "Data & Science",
+    },
+    // Row 2: cols 1, 3, 5 (left, center, right)
+    {
+        id: 7,
+        name: "Perkung-fu",
+        backgroundImage: "/perkung-fu-1.png",
+        link: "/projects/perkung-fu",
+        type: "Sound & Interaction",
+        visible: false,
+    },
+    {
         id: 10,
         name: "The Dance of Laplace",
         backgroundImage: "/laplace1.jpeg",
         link: "/projects/dance-of-laplace",
         type: "Sound & Interaction",
+    },
+    {
+        id: 5,
+        name: "VestaESG",
+        backgroundImage: "/proyecto-carbono4.png",
+        link: "/projects/vestaesg",
+        type: "Data & Science",
+    },
+    // Row 3: col 0 (left)
+    {
+        id: 8,
+        name: "NeoChucao",
+        backgroundImage: "/NeoChucao.png",
+        link: "/projects/neochucao",
+        type: "Sound & Interaction",
+        visible: false,
     },
 ];

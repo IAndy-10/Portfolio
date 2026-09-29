@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { dataPortfolio_Engineer, dataPortfolio_Artist } from "../data";
+import { dataPortfolio_Engineer, dataPortfolio_Artist } from "@/data";
 
 export default function SidebarProjects() {
   return (
