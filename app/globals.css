@@ -5,10 +5,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Albra";
-  src: url("/fonts/AlbraBookTRIAL-Bold.otf") format("otf"),
-       url("/fonts/AlbraTRIAL-Thin.otf") format("otf");
-  font-weight: normal;
+  font-family: "Helvetica Neue LT Pro";
+  src: url("/fonts/HelveticaNeueLTPro-Thin.otf") format("opentype");
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -17,13 +16,14 @@ html {
 }
 html,
 body {
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-helvetica), "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #E8E0CA;
   background: #0B0F14;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display), serif;
+  font-family: var(--font-helvetica), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 main {

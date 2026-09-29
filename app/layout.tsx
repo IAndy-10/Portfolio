@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Poppins, DM_Serif_Display } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
 import "./globals.css";
 import 'swiper/css';
@@ -8,16 +9,16 @@ import 'swiper/css/scrollbar';
 
 import Header from "@/components/header";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-poppins",
+const helveticaNeue = localFont({
+  src: "../public/fonts/HelveticaNeueLTPro-Thin.otf",
+  variable: "--font-helvetica",
+  weight: "200",
 });
 
-const dmSerif = DM_Serif_Display({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-display",
+  weight: ["300", "400", "500"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${dmSerif.variable} font-sans`}>
+      <body className={`${helveticaNeue.variable} ${jetbrainsMono.variable} font-sans`}>
         <Header />
         {children}
       </body>

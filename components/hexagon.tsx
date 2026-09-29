@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { hexagonData as allHexagonData } from "@/data";
 
-const hexagonData = allHexagonData.filter((h) => (h as any).visible !== false);
+const filteredHexagonData = allHexagonData.filter((h) => (h as any).visible !== false);
 
 // Tipos para los datos del hexágono
 interface HexagonData {
@@ -32,12 +32,13 @@ const _rowOffset = (hexSize.width + _gap) / 2;
 
 interface HexagonalGridProps {
   rows: number[][];
+  showAll?: boolean;
 }
 // Componente Hexagon que recibe data
 function Hexagon({ data, className = "" }: HexagonProps) {
   
   return (
-    <div className="transition-all duration-300 hover:drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
+    <div className="transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(233,236,255,0.5)]">
     <Link href={data.link}>
       <div
         className={`
@@ -57,11 +58,13 @@ function Hexagon({ data, className = "" }: HexagonProps) {
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-secondary bg-opacity-90 group-hover:bg-opacity-20 transition-all duration-300" />
+          <div className="absolute inset-0 bg-secondary bg-opacity-90 group-hover:bg-opacity-0 transition-all duration-300" />
+          {/* Blue tint on hover */}
+          <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-80 transition-all duration-300" />
           
           {/* Nombre */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-foreground font-bold text-sm text-center px-2 relative z-10">
+            <span className="text-background group-hover:text-white font-mono font-medium text-sm text-center px-2 relative z-10 transition-colors duration-300">
               {data.name}
             </span>
           </div>
@@ -73,7 +76,8 @@ function Hexagon({ data, className = "" }: HexagonProps) {
 }
 
 // Grilla hexagonal configurable
-export default function HexagonalGrid({ rows }: HexagonalGridProps) {
+export default function HexagonalGrid({ rows, showAll = false }: HexagonalGridProps) {
+  const hexagonData = showAll ? allHexagonData : filteredHexagonData;
   const gridConfig = rows.map((row) => row.map((v) => v === 1));
 
   const maxCols = Math.max(...rows.map((r) => r.length));
@@ -131,7 +135,7 @@ export default function HexagonalGrid({ rows }: HexagonalGridProps) {
 
   return (
     <div
-      className="flex items-center justify-center p-8 md:min-h-screen"
+      className="flex items-center justify-center pt-8 px-10 pb-8"
       style={{ minHeight: scale < 1 ? `${GRID_HEIGHT * scale + 64}px` : undefined }}
     >
       {/* Contenedor que se ajusta al tamaño real de la grilla */}

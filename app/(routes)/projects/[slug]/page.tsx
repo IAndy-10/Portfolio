@@ -54,7 +54,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   )}
                 </div>
                 <h1 className="text-4xl font-bold text-primary mb-3">{project.title}</h1>
-                <p className="text-primary text-xl">{project.subtitle}</p>
+                <p className="text-secondary text-xl">{project.subtitle}</p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.tools.map((tool) => (
                     <span key={tool} className="text-xs border border-secondary text-secondary px-3 py-1 rounded-full">{tool}</span>
@@ -81,7 +81,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       allowFullScreen
                     />
                   </div>
-                  <p className="text-primary text-sm leading-relaxed text-justify">
+                  <p className="text-secondary text-sm leading-relaxed text-justify">
                     This version was used in the MAT EoY 2026. The system is functional at the DSP level — the reverb engine runs in C++/JUCE with 56 parameters — and gesture recognition via MediaPipe is integrated in the Webview layer.
                   </p>
                 </section>
@@ -239,10 +239,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <section className="space-y-4">
                 <h2 className="text-2xl font-semibold text-primary">{contextLabel}</h2>
                 {project.narrative.split("\n\n").map((para, i) => (
-                  <p key={i} className="text-primary leading-relaxed text-justify">{para}</p>
+                  <p key={i} className="text-secondary leading-relaxed text-justify">{para}</p>
                 ))}
                 {slug === "posttalk" && (
-                  <p className="text-primary leading-relaxed text-justify">
+                  <p className="text-secondary leading-relaxed text-justify">
                     A key inspiration for this direction is the work of{" "}
                     <a href="https://roli.com/us" target="_blank" rel="noopener noreferrer" className="text-secondary underline hover:opacity-75 transition-opacity">ROLI</a>
                     {" "}— their instruments reimagine the relationship between the performer&apos;s body and sound in ways that have shaped how I think about expressive control.
@@ -255,7 +255,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <h2 className="text-2xl font-semibold text-primary">Technical Detail</h2>
                 <ul className="space-y-3">
                   {project.technicalDetail.map((item, i) => (
-                    <li key={i} className="flex gap-3 text-primary leading-relaxed text-justify">
+                    <li key={i} className="flex gap-3 text-secondary leading-relaxed text-justify">
                       <span className="text-secondary mt-1">—</span>
                       <span>{item}</span>
                     </li>
@@ -269,7 +269,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   <h2 className="text-2xl font-semibold text-primary">Iteration process</h2>
                   <ul className="space-y-3">
                     {((project as any).iterations as { title: string; description: string }[]).map((item, i) => (
-                      <li key={i} className="flex gap-3 text-primary leading-relaxed text-justify">
+                      <li key={i} className="flex gap-3 text-secondary leading-relaxed text-justify">
                         <span className="text-secondary mt-1">—</span>
                         <span>{item.title}: {item.description}</span>
                       </li>
@@ -284,7 +284,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   <h2 className="text-2xl font-semibold text-primary">Learnings</h2>
                   <ul className="space-y-3">
                     {project.learnings.map((item, i) => (
-                      <li key={i} className="flex gap-3 text-primary leading-relaxed text-justify">
+                      <li key={i} className="flex gap-3 text-secondary leading-relaxed text-justify">
                         <span className="text-secondary mt-1">—</span>
                         <span>{item}</span>
                       </li>

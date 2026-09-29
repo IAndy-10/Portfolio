@@ -23,9 +23,8 @@ const config: Config = {
         darkBg: "#0B0F14",
       },
       fontFamily: {
-        sans: ["var(--font-poppins)", "sans-serif"],
-        display: ["var(--font-display)", "serif"],
-        miTipografia: ["Albra", "sans-serif"],
+        sans: ["var(--font-helvetica)", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        mono: ["var(--font-mono)", "JetBrains Mono", "monospace"],
       },
       scale: {
         160: "1.6",

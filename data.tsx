@@ -226,6 +226,7 @@ export const dataPortfolio_Artist = [
         status: "in-development",
         repository: "https://github.com/IAndy-10/PosTalk",
         images: ["/fungi1.jpg"],
+        video_url: "https://www.youtube.com/embed/jO9crDHlqVA",
     },
     {
         id: 2,
@@ -295,6 +296,7 @@ export const dataPortfolio_Artist = [
         status: "in-development",
         repository: "https://github.com/IAndy-10/PerKung-fu",
         images: ["/perkung-fu-1.png"],
+        video_url: "https://www.youtube.com/embed/HDvQbkjqt-I",
     },
     {
         id: 6,
@@ -320,6 +322,7 @@ export const dataPortfolio_Artist = [
         images: ["/example-picture-rave-midi.jpeg"],
         audio: "/NeoChucao-example.wav",
         repository: "https://github.com/IAndy-10/NeoChucao",
+        video_url: "https://www.youtube.com/embed/uRod_opk1PA",
         iterations: [
             {
                 title: "Python + Supriya",
@@ -471,6 +474,7 @@ export const hexagonData = [
         backgroundImage: "/fungi1.jpg",
         link: "/projects/posttalk",
         type: "Sound & Interaction",
+        visible: false,
     },
     {
         id: 1,
@@ -485,6 +489,7 @@ export const hexagonData = [
         backgroundImage: "/Reverbo.png",
         link: "/projects/reverbo",
         type: "Sound & Interaction",
+        visible: false,
     },
     {
         id: 3,
@@ -513,6 +518,7 @@ export const hexagonData = [
         backgroundImage: "/perkung-fu-1.png",
         link: "/projects/perkung-fu",
         type: "Sound & Interaction",
+        visible: false,
     },
     {
         id: 8,
@@ -520,6 +526,7 @@ export const hexagonData = [
         backgroundImage: "/NeoChucao.png",
         link: "/projects/neochucao",
         type: "Sound & Interaction",
+        visible: false,
     },
     {
         id: 9,

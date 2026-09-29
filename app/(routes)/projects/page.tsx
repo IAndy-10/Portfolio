@@ -32,7 +32,7 @@ const ProjectsPage = () => {
             {/* Desktop: hexagon grid */}
             <div className="hidden md:block w-full relative flex items-center justify-center">
                 <div className="relative z-0">
-                    <HexagonalGrid rows={[[0,1,0,0,1,1],[0,1,0,1,0,0],[1,0,0,1,1,0],[1,0,0,1,0,0]]} />
+                    <HexagonalGrid rows={[[0,1,0,1,0,1],[1,0,1,0,1,0],[0,1,0,1,0,1],[1,0,0,0,0,0]]} showAll />
                 </div>
             </div>
 
