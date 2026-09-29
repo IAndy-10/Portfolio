@@ -1,5 +1,3 @@
-import { Linkedin, Github, Mail, Download } from "lucide-react";
-
 const Banner = () => {
   return (
     <footer className="w-full">

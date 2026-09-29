@@ -1,12 +1,3 @@
-import { Linkedin } from "lucide-react";
-
-export const socialNetworks = [
-    {
-        id: 2,
-        logo: <Linkedin size={30} strokeWidth={1} />,
-        src: "#!",
-    },
-];
 
 export const dataAboutPage = [
     {
