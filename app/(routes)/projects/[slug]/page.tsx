@@ -7,6 +7,9 @@ import SidebarProjects from "@/components/projects/sidebar-projects";
 import ProjectMobileDisplay from "@/components/projects/project-mobile-display";
 import Image from "next/image";
 import YoTerraPoem from "@/components/projects/yoterra-poem";
+import PosttalkArchitecture from "@/components/projects/posttalk-architecture";
+import PerkungfuArchitecture from "@/components/projects/perkungfu-architecture";
+import ReverboArchitecture from "@/components/projects/reverbo-architecture";
 
 const allProjects = [...dataPortfolio_Artist, ...dataPortfolio_Engineer];
 
@@ -87,6 +90,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </section>
               )}
 
+              {/* === PostTalk: Architecture + Performance === */}
+              {slug === "posttalk" && <PosttalkArchitecture />}
+
               {/* === AquiFuturo: Video preview === */}
               {slug === "aquifuturo" && hasVideo && (
                 <section className="space-y-4">
@@ -113,6 +119,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   />
                 </div>
               )}
+
+              {/* === PerKung-fu: Architecture + Performance === */}
+              {slug === "perkung-fu" && <PerkungfuArchitecture />}
 
               {/* === NeoChucao: Sound Examples === */}
               {slug === "neochucao" && (
@@ -166,6 +175,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   )}
                 </>
               )}
+
+              {/* === Reverbo: Architecture + Performance === */}
+              {slug === "reverbo" && <ReverboArchitecture />}
 
               {slug === "yoterra" && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -246,6 +258,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 {project.narrative.split("\n\n").map((para, i) => (
                   <p key={i} className="text-secondary leading-relaxed text-justify">{para}</p>
                 ))}
+                {slug === "perkung-fu" && (
+                  <p className="text-secondary leading-relaxed text-justify">
+                    Inspired by{" "}
+                    <a href="https://sampleson.com/haptic-perc.html" target="_blank" rel="noopener noreferrer" className="text-secondary underline hover:opacity-75 transition-opacity">Haptic Percussion</a>
+                    {" "}from Sampleson — turning everyday objects into expressive instruments through contact microphones.
+                  </p>
+                )}
                 {slug === "posttalk" && (
                   <p className="text-secondary leading-relaxed text-justify">
                     A key inspiration for this direction is the work of{" "}
