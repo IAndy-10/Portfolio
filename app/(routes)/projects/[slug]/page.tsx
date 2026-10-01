@@ -10,6 +10,7 @@ import YoTerraPoem from "@/components/projects/yoterra-poem";
 import PosttalkArchitecture from "@/components/projects/posttalk-architecture";
 import PerkungfuArchitecture from "@/components/projects/perkungfu-architecture";
 import ReverboArchitecture from "@/components/projects/reverbo-architecture";
+import AquifuturoArchitecture from "@/components/projects/aquifuturo-architecture";
 
 const allProjects = [...dataPortfolio_Artist, ...dataPortfolio_Engineer];
 
@@ -93,19 +94,24 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {/* === PostTalk: Architecture + Performance === */}
               {slug === "posttalk" && <PosttalkArchitecture />}
 
-              {/* === AquiFuturo: Video preview === */}
-              {slug === "aquifuturo" && hasVideo && (
+              {/* === AquiFuturo: YouTube video === */}
+              {slug === "aquifuturo" && hasVideoUrl && (
                 <section className="space-y-4">
                   <h2 className="text-2xl font-semibold text-primary">Preview</h2>
-                  <div className="w-full overflow-hidden rounded-lg bg-surface-alt">
-                    <video controls className="w-full" style={{ maxHeight: "520px" }}>
-                      <source src={(project as any).video} type="video/quicktime" />
-                      <source src={(project as any).video} type="video/mp4" />
-                      Your browser does not support the video element.
-                    </video>
+                  <div className="w-full aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      className="w-full h-full"
+                      src={(project as any).video_url}
+                      title="AquiFuturo"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   </div>
                 </section>
               )}
+
+              {/* === AquiFuturo: Architecture + Specs === */}
+              {slug === "aquifuturo" && <AquifuturoArchitecture />}
 
               {/* === Perkung-fu: YouTube video === */}
               {slug === "perkung-fu" && (
