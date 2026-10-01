@@ -314,7 +314,7 @@ export const dataPortfolio_Artist = [
         images: ["/example-picture-rave-midi.jpeg"],
         audio: "/NeoChucao-example.wav",
         repository: "https://github.com/IAndy-10/NeoChucao",
-        video_url: "https://www.youtube.com/embed/uRod_opk1PA",
+        video_url: "https://www.youtube.com/embed/At6OtB0Dt7w",
         iterations: [
             {
                 title: "Python + Supriya",

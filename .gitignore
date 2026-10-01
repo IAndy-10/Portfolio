@@ -53,6 +53,7 @@ Thumbs.db
 
 # Media
 *.wav
+!public/claude-collider-rave-mcp.wav
 *.mp3
 *.mp4
 *.mov

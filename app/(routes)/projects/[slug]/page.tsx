@@ -132,24 +132,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {/* === NeoChucao: Sound Examples === */}
               {slug === "neochucao" && (
                 <section className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-primary">Sound Examples</h2>
-                  <h4 className="text-sm font-semibold text-primary">Claude Collider MCP + Rave example</h4>
-                  <audio controls className="w-full">
-                    <source src="/claude-collider-rave-mcp.wav" type="audio/wav" />
-                    Your browser does not support the audio element.
-                  </audio>
+                  <h2 className="text-2xl font-semibold text-primary">Demo</h2>
                   <div className="w-full aspect-video rounded-lg overflow-hidden">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/uRod_opk1PA"
-                      title="Claude Collider MCP + Rave"
+                      src="https://www.youtube.com/embed/At6OtB0Dt7w"
+                      title="NeoChucao — Claude Collider MCP + RAVE"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
                   </div>
-                  <h4 className="text-sm font-semibold text-primary">Rave Midi example</h4>
+                  <h4 className="text-sm font-semibold text-primary">Claude Collider MCP + RAVE</h4>
                   <audio controls className="w-full">
-                    <source src="/rave-midi-example.wav" type="audio/wav" />
+                    <source src="/claude-collider-rave-mcp.wav" type="audio/wav" />
                     Your browser does not support the audio element.
                   </audio>
                   {/* Images */}
