@@ -310,7 +310,6 @@ export const dataPortfolio_Artist = [
         ],
         status: "complete",
         images: ["/example-picture-rave-midi.jpeg"],
-        audio: "/NeoChucao-example.wav",
         repository: "https://github.com/IAndy-10/NeoChucao",
         video_url: "https://www.youtube.com/embed/At6OtB0Dt7w",
         iterations: [
@@ -345,7 +344,7 @@ export const dataPortfolio_Artist = [
             "The pipeline generalizes — any tree with a photogrammetric scan could generate its own soundscape.",
         ],
         status: "complete",
-        repository: "",
+        repository: "https://github.com/IAndy-10/AquiFuturo",
         images: [],
         video_url: "https://www.youtube.com/embed/JtSMAYQnHuI",
     },
