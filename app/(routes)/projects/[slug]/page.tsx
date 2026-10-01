@@ -142,11 +142,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       allowFullScreen
                     />
                   </div>
-                  <h4 className="text-sm font-semibold text-primary">Claude Collider MCP + RAVE</h4>
-                  <audio controls className="w-full">
-                    <source src="/claude-collider-rave-mcp.wav" type="audio/wav" />
-                    Your browser does not support the audio element.
-                  </audio>
                   {/* Images */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {project.images.map((img, i) => (
