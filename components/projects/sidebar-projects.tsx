@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { dataPortfolio_Engineer, dataPortfolio_Artist } from "@/data";
+import { dataPortfolio_Engineer, dataPortfolio_Artist, dataPortfolio_Maker } from "@/data";
 
 export default function SidebarProjects() {
   return (
@@ -30,6 +30,22 @@ export default function SidebarProjects() {
         <h3 className="text-lg font-semibold mb-2">Data & Science</h3>
         <ul className="space-y-1">
           {dataPortfolio_Engineer.map((project) => (
+            <li key={project.id}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="text-secondary hover:text-foreground transition-colors"
+              >
+                {project.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* Embedded & Fabrication */}
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold mb-2">Embedded & Fabrication</h3>
+        <ul className="space-y-1">
+          {dataPortfolio_Maker.map((project) => (
             <li key={project.id}>
               <Link
                 href={`/projects/${project.slug}`}

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { hexagonData as allHexagonData, dataPortfolio_Artist, dataPortfolio_Engineer } from "@/data";
+import { hexagonData as allHexagonData, dataPortfolio_Artist, dataPortfolio_Engineer, dataPortfolio_Maker } from "@/data";
 
 const hexagonData = allHexagonData.filter((h) => (h as any).visible !== false);
 
@@ -11,6 +11,9 @@ dataPortfolio_Engineer.forEach((p) => {
   subtitleMap[`/projects/${p.slug}`] = p.subtitle;
 });
 dataPortfolio_Artist.forEach((p) => {
+  subtitleMap[`/projects/${p.slug}`] = p.subtitle;
+});
+dataPortfolio_Maker.forEach((p) => {
   subtitleMap[`/projects/${p.slug}`] = p.subtitle;
 });
 

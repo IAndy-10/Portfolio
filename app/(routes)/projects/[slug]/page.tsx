@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { dataPortfolio_Artist, dataPortfolio_Engineer } from "@/data";
+import { dataPortfolio_Artist, dataPortfolio_Engineer, dataPortfolio_Maker } from "@/data";
 import TransitionPage from "@/components/ui/transition-page";
 import ContainerPage from "@/components/ui/container-page";
 import Banner from "@/components/ui/banner";
@@ -12,7 +12,7 @@ import PerkungfuArchitecture from "@/components/projects/perkungfu-architecture"
 import ReverboArchitecture from "@/components/projects/reverbo-architecture";
 import AquifuturoArchitecture from "@/components/projects/aquifuturo-architecture";
 
-const allProjects = [...dataPortfolio_Artist, ...dataPortfolio_Engineer];
+const allProjects = [...dataPortfolio_Artist, ...dataPortfolio_Engineer, ...dataPortfolio_Maker];
 
 function findProject(slug: string) {
   return allProjects.find((p) => p.slug === slug);
@@ -202,6 +202,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   {project.images.map((img, i) => (
                     <div key={i} className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
                       <Image src={img} alt={`${project.title} ${i + 1}`} fill className="object-cover" />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {slug === "edible-patterns" && project.images.length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {project.images.map((img, i) => (
+                    <div key={i} className="w-full h-64 relative overflow-hidden rounded-lg bg-surface-alt">
+                      <Image src={img} alt={`${project.title} ${i + 1}`} fill quality={95} className="object-cover" />
                     </div>
                   ))}
                 </div>

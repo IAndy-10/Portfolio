@@ -454,6 +454,33 @@ export const dataPortfolio_Engineer = [
     },
 ];
 
+export const dataPortfolio_Maker = [
+    {
+        id: 1,
+        slug: "edible-patterns",
+        title: "Edible Patterns",
+        subtitle: "Automated cake piping machine built on a modified Ender 3 — controlled by a Teensy 4.1 running StepDance firmware, with a browser-based UI communicating over Web Serial.",
+        tags: ["Embedded Systems", "CAD", "Motion Control", "HCI"],
+        tools: ["Teensy 4.1", "StepDance Driver Module", "TMC2209", "StepDance", "Web Serial API", "HTML/JS", "Fusion 360", "Ender 3"],
+        category: "Embedded & Fabrication",
+        narrative: "What if a 3D printer could pipe frosting onto a cake with precision and repeatability — removing the years of manual skill required for decorative piping?\n\nEdible Patterns repurposes an Ender 3 3D printer as a 4-axis frosting extrusion machine. The original hot-end was replaced with a custom syringe-and-plunger mechanism designed in Fusion 360, driven by a stepper motor with a lead screw. A Teensy 4.1 mounted on a StepDance Driver Module board with TMC2209 stepper drivers coordinates all four axes (X, Y, Z, Extrusion) in real time using the StepDance motion control library.\n\nThe operator controls the machine from a single-file HTML interface served locally in the browser. It connects directly to the Teensy via the Web Serial API — no backend server — sending JSON RPC commands over USB at 115,200 baud. The UI supports keyboard jog controls, gamepad input, spiral pattern generation with live parameter tuning, and interchangeable piping tip profiles that adjust extrusion ratios on the fly.\n\nCollaboration with Jonathan Crescenzo, in the context of Creative Motion Control — Spring 2026, taught by Jennifer Jacobs at UCSB.",
+        technicalDetail: [
+            "Firmware on Teensy 4.1 mounted on a StepDance Driver Module v1.0 with TMC2209 stepper drivers: 4 output channels (X, Y, Z, E) with configurable step ratios, encoder feedback on X/Y, polar-to-Cartesian kinematics for inward spiral generation, path-length-based extrusion coupling, and wave/velocity generators for each axis.",
+            "Custom extrusion mechanism: syringe mounted beside a stepper motor driving a lead screw plunger. Three interchangeable piping tips (Regular, Big Star, Small Star) with runtime-switchable Z-axis ratios and extrusion multipliers via RPC.",
+            "Browser UI built as a single HTML file using the Web Serial API. JSON RPC protocol over USB at 115,200 baud — no server required. Supports keyboard controls, gamepad polling (~50 ms loop), live spiral speed adjustment, and a canvas-based radius preview.",
+            "Iterative hardware design in Fusion 360: plunger holder, syringe mount, and tip adapter — 3D printed in PLA on the same Ender 3 before conversion.",
+        ],
+        learnings: [
+            "Adapting an existing machine (Ender 3) rather than building from scratch was the right call — the frame, stepper drivers, and power supply are already solved problems. The creative work was in the extrusion mechanism and the control interface.",
+            "Web Serial is a powerful bridge between embedded hardware and browser-based UIs — no middleware, no drivers, just open a port and send JSON. It made iteration extremely fast: change the HTML, refresh, and test immediately.",
+            "Extrusion consistency depends heavily on tip geometry and frosting viscosity. The three-tip-profile system was born from trial and error — each tip needs its own Z-ratio and extrusion multiplier to produce clean lines.",
+        ],
+        status: "complete",
+        repository: "",
+        images: ["/edible-patterns-1.jpeg", "/edible-patterns-2.JPG", "/edible-patterns-3.jpeg"],
+    },
+];
+
 export const hexagonData = [
     // Row 0: cols 1, 3, 5 (left, center, right)
     {
@@ -532,5 +559,12 @@ export const hexagonData = [
         link: "/projects/neochucao",
         type: "Sound & Interaction",
         visible: false,
+    },
+    {
+        id: 11,
+        name: "Edible Patterns",
+        backgroundImage: "/edible-patterns-1.jpeg",
+        link: "/projects/edible-patterns",
+        type: "Embedded & Fabrication",
     },
 ];
