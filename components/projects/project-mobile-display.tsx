@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { hexagonData as allHexagonData, dataPortfolio_Artist, dataPortfolio_Engineer, dataPortfolio_Maker } from "@/data";
 
-const hexagonData = allHexagonData.filter((h) => (h as any).visible !== false);
+const hexagonData = allHexagonData;
 
 // Slug-based subtitle lookup
 const subtitleMap: Record<string, string> = {};
