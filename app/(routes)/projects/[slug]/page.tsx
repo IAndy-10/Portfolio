@@ -12,7 +12,26 @@ import PerkungfuArchitecture from "@/components/projects/perkungfu-architecture"
 import ReverboArchitecture from "@/components/projects/reverbo-architecture";
 import AquifuturoArchitecture from "@/components/projects/aquifuturo-architecture";
 
-const allProjects = [...dataPortfolio_Artist, ...dataPortfolio_Engineer, ...dataPortfolio_Maker];
+type Project = {
+  id: number;
+  slug: string;
+  title: string;
+  subtitle: string;
+  tags: string[];
+  tools: string[];
+  category: string;
+  narrative: string;
+  technicalDetail: string[];
+  learnings: string[];
+  status: string;
+  repository: string;
+  images: string[];
+  video_url?: string;
+  siteUrl?: string;
+  iterations?: { title: string; description: string; url?: string }[];
+};
+
+const allProjects: Project[] = [...dataPortfolio_Artist, ...dataPortfolio_Engineer, ...dataPortfolio_Maker] as Project[];
 
 function findProject(slug: string) {
   return allProjects.find((p) => p.slug === slug);
