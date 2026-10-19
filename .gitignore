@@ -55,6 +55,7 @@ Thumbs.db
 *.wav
 !public/claude-collider-rave-mcp.wav
 *.mp3
+!public/First-Singing.mp3
 *.mp4
 *.mov
 *.MOV
